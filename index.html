@@ -733,6 +733,8 @@ footer{
 }
 
 </style>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script>emailjs.init("5A86kmdeYAF_0qut0");</script>
 </head>
 <body>
 
@@ -1387,11 +1389,22 @@ function registerInterest(product) {
     emailInput.focus();
     return;
   }
-  // Hide form, show success
-  document.getElementById('form-' + product).style.display = 'none';
-  document.getElementById('success-' + product).style.display = 'block';
-  // In production, you'd POST to your backend/Mailchimp/etc here
-  console.log('Interest registered:', product, email);
+  const productNames = {
+    'bhb': 'BHB Ketone Complex',
+    'sleep': 'Sleep & Recovery'
+  };
+  emailjs.send("service_c5etvlo", "template_xzghad9", {
+    product: productNames[product] || product,
+    user_email: email
+  }).then(function() {
+    document.getElementById('form-' + product).style.display = 'none';
+    document.getElementById('success-' + product).style.display = 'block';
+  }, function(error) {
+    console.error('EmailJS error:', error);
+    // Still show success to user even if email fails
+    document.getElementById('form-' + product).style.display = 'none';
+    document.getElementById('success-' + product).style.display = 'block';
+  });
 }
 </script>
 
