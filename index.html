@@ -2,6 +2,8 @@
 <html lang="zh">
 <head>
 <meta charset="UTF-8">
+  <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAIAAAD8GO2jAAAEpklEQVR4nN1WTUgbWxSeuZMxY2pKIjMTicGN2BJwUUTUpQkirdpu/EXdiKCISqkKUjcqliy6KUQXQimFUmpABbEqKAbBTaEiiK2ICFKhMVbM5KdmfjP3vsWVqa9NxPfTxXtne+893znf+c45l2RZlvidBn6r9/8FgOkml0iSBAAghEiSJEmSIAiEkK7r/w4ARVG6rv/qjiRJhNA/BSBJUtd1hmEqKipOTk7Ky8vNZjNN04eHh+vr6zfByAiA2YAQtre39/T03LlzJxAIEATR0tJCEISqqh6P5/DwEAAAIbwGIGOR8ctnz569ePHC5XJdXFy0tLTs7u5++fIlGo0CAEZHR3FVrs8gPQDmvbW1tbu7+/z83GQyxWKxxcXFWCz29u1bu90ei8Wqq6sfPnyo6zpFUdcAkL92MhYMx3EbGxsMwzAMs7W11dvbGwqFCIKwWq2rq6sulwshFA6Hq6qqRFFECGUqRpoMcOkGBgZ4nocQJpNJ7J2maZqmv3//7vP5srOzRVEsLCx8/PgxhBCAzFSnJae4uLi1tVUQBJvN9urVK+xd0zRN0yiKWlpaWltbs9vt0Wi0q6vL7XZfQ1R65OHh4aysLJqmT05OXr58SZJkKpW6yqHP51NVlSAIs9k8NjaWKfyfAXD4Ho+nuro6Go1ardbXr18LgkBRFKYYUwEh3Nvbm56ettvtgiB4vd76+vpMSfwJACFEUdTQ0FAqlWIY5uvXr2/evMHdAADAwtV1vaio6Pnz59++ffv06dPt27eTyeTIyIjNZkur2h8AFEVBCB89elRWVhaPx3NycgKBgCAINE3jqCGE9+7d8/v979+/7+jo6OrqevfuHU3TkiQVFBQMDAykrzbLsizLchzH83x+fv7nz59lWY7H44IglJSUOBwOfKG2tnZhYSGRSGBFbm9vt7W1OZ3OjY0NTdMikYgkSV6vl2VZ4wm2S4C8vDyWZZ88eYIQOjs7QwjNzs7io7q6uuXlZUmSUqkUQuj09HRsbCw/Px+fVlZWJpPJSCSiadrm5ibP82kAOI7jOK6goODg4ECSJEEQZFn2er1er3dpaUmWZVVVFUVRFGV2dra0tBS/dDgc2Jff7zfC6u/v/ykJwgh/cHAQIRSJRERRPDo6mpmZEUVRVdVEIgEh3NnZaW5uNtLlOM4gtrCw8OjoKJlMJhKJUCjkdrt5nud5Hl8GxkDu7OyUZRkAoGkax3ENDQ2KogAAFEWZmJioqakJBoMURQEAMFdYdSRJxuNxn89nsVhkWXY6nU+fPoUQGnICWOMPHjy4e/euKIq4p7ALi8UyNzd3//79yclJVVVxl/w0nLH8FxYWgsGg3W4/Oztrbm4uKysz2uJSVR6PByudYZjc3FyLxbK5udnY2NjX13d8fGwymXCiaXsVZzM+Pq7rOsdxWVlZU1NTNpsN52HCxysrK5WVlQCAcDj88ePH+fn5Dx8+4OZACF2dE78adrS/v9/U1OR0OhVFyc7ONpvNlzvcGNdWq/XWrVuCIOAhgxf9DTc7kXlFXwJc3XyYu5u7NoyiKKO2uq5jPNPVNI2zv+r6moc/lv5N/iB/w/77X8ffDvAHeaKTswjbr88AAAAASUVORK5CYII=">
+  <link rel="apple-touch-icon" href="data:image/png;base64,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">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Avenqor | Premium Health Supplements New Zealand</title>
 <meta name="description" content="Avenqor delivers science-backed health supplements made to New Zealand standards — BHB ketone weight management, blood sugar regulation, sleep formula, and pure omega-3 fish oil.">
@@ -1012,7 +1014,7 @@ footer{
       <h4>How BHB Ketone Salts Shift Your Body Into Fat-Burning Mode</h4>
       <p>Most weight supplements chase appetite suppression alone. BHB takes a different route — signalling the body to shift its primary fuel source at the cellular level...</p>
       <div class="insight-meta">
-        <span class="insight-date">20 May 2025</span>
+        <span class="insight-date">25 May 2025</span>
         <a href="#" class="insight-arrow">Read →</a>
       </div>
     </div>
@@ -1021,7 +1023,7 @@ footer{
       <h4>Why Postprandial Glucose Spikes Matter More Than Fasting Levels</h4>
       <p>Fasting glucose is what most people check. But the spike after a meal — and how quickly your body recovers — is a far stronger predictor of long-term metabolic health...</p>
       <div class="insight-meta">
-        <span class="insight-date">15 May 2025</span>
+        <span class="insight-date">20 Sep 2025</span>
         <a href="#" class="insight-arrow">Read →</a>
       </div>
     </div>
@@ -1030,7 +1032,7 @@ footer{
       <h4>The 2-Phase Sleep Architecture and Why Deep Sleep Is Non-Negotiable</h4>
       <p>Sleep isn't one continuous state — it's a structured cycle. What you do in the first 90-minute block determines whether your body recovers, or merely rests...</p>
       <div class="insight-meta">
-        <span class="insight-date">10 May 2025</span>
+        <span class="insight-date">8 Dec 2025</span>
         <a href="#" class="insight-arrow">Read →</a>
       </div>
     </div>
@@ -1039,7 +1041,7 @@ footer{
       <h4>Triglyceride vs Ethyl Ester: Which Form of Omega-3 Actually Absorbs?</h4>
       <p>Not all fish oil is equal. The molecular form of omega-3 dramatically affects bioavailability — and most store-brand products use the cheaper, inferior version...</p>
       <div class="insight-meta">
-        <span class="insight-date">5 May 2025</span>
+        <span class="insight-date">30 Jan 2026</span>
         <a href="#" class="insight-arrow">Read →</a>
       </div>
     </div>
@@ -1048,18 +1050,153 @@ footer{
       <h4>How Phospholipid Omega-3s from Krill Reach Cells Fish Oil Can't</h4>
       <p>Krill oil's secret is its phospholipid structure — the same form cells are made of. This means it crosses biological membranes more efficiently than triglyceride fish oil...</p>
       <div class="insight-meta">
-        <span class="insight-date">29 Apr 2025</span>
+        <span class="insight-date">17 Mar 2026</span>
         <a href="#" class="insight-arrow">Read →</a>
       </div>
     </div>
-    <div class="insight-card" onclick="openModal('article-blood')">
-      <div class="insight-series">Series 02 · Blood Sugar</div>
+    <div class="insight-card" onclick="openModal('article-berberine')">
+      <div class="insight-series">Series 06 · Blood Sugar</div>
       <h4>Berberine, Chromium, and Cinnamon: What the Evidence Actually Says</h4>
       <p>Three ingredients dominate the blood sugar supplement space — but their evidence varies enormously. Here's an honest look at what works, what doesn't, and why...</p>
       <div class="insight-meta">
-        <span class="insight-date">22 Apr 2025</span>
+        <span class="insight-date">3 May 2026</span>
         <a href="#" class="insight-arrow">Read →</a>
       </div>
+    </div>
+    <div class="insight-card" onclick="openModal('article-omega3')">
+      <div class="insight-series">Series 07 · Omega-3</div>
+      <h4>Omega-3 for Brain &amp; Heart: Why Source and Purity Matter</h4>
+      <p>Not all omega-3 supplements deliver what they promise. Source, processing method, and oxidation level determine whether you&#x2019;re getting benefit &#x2014; or none at all...</p>
+      <div class="insight-meta">
+        <span class="insight-date">14 Jun 2026</span>
+        <a href="#" class="insight-arrow">Read →</a>
+      </div>
+    </div>
+    <div class="insight-card" onclick="openModal('article-nzstandard')">
+      <div class="insight-series">Series 08 · Standards</div>
+      <h4>Why New Zealand Supplements Are Held to a Higher Standard</h4>
+      <p>New Zealand&#x2019;s regulatory environment for natural health products is among the most rigorous in the world. Here&#x2019;s what that means for you as a consumer...</p>
+      <div class="insight-meta">
+        <span class="insight-date">28 Jul 2026</span>
+        <a href="#" class="insight-arrow">Read →</a>
+      </div>
+    </div>
+    <div class="insight-card" onclick="openModal('article-ketosis')">
+      <div class="insight-series">Series 09 · BHB &amp; Ketosis</div>
+      <h4>Ketosis vs. Low-Carb: What&#x2019;s the Difference and Which Works?</h4>
+      <p>Many people confuse low-carb eating with ketosis &#x2014; they&#x2019;re related, but not the same. Understanding the difference is key to knowing when BHB supplementation actually helps...</p>
+      <div class="insight-meta">
+        <span class="insight-date">12 Sep 2026</span>
+        <a href="#" class="insight-arrow">Read →</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ARTICLE MODAL: BERBERINE -->
+<div class="modal-overlay" id="article-berberine">
+  <div class="modal-box">
+    <div class="modal-header">
+      <button class="modal-close" onclick="closeModal('article-berberine')">✕</button>
+      <div class="modal-series">Series 06 · Blood Sugar</div>
+      <h2>Berberine, Chromium, and Cinnamon: What the Evidence Actually Says</h2>
+      <div class="modal-meta">3 May 2026</div>
+    </div>
+    <div class="modal-body">
+<p>Walk into any pharmacy and the blood sugar supplement shelf looks full of options. But behind the similar labels are ingredients with dramatically different levels of scientific support. Berberine, chromium, and cinnamon are the three most commonly seen — and the gap between them is significant.</p>
+
+<h3>Berberine: The One with Real Clinical Data</h3>
+<p>Berberine is an alkaloid compound found in several plants, and it has been studied extensively in human clinical trials. Multiple randomised controlled trials have shown berberine can reduce fasting blood glucose, HbA1c, and postprandial glucose spikes — with effects comparable in some studies to metformin, the most commonly prescribed diabetes medication.</p>
+<p>Its primary mechanism is activation of AMPK (AMP-activated protein kinase), the same pathway metformin works through. This improves insulin sensitivity, reduces hepatic glucose output, and enhances cellular glucose uptake. The evidence base here is genuinely strong — over 40 human trials with consistent results.</p>
+
+<h3>Chromium: Modest Effects in Specific Populations</h3>
+<p>Chromium is an essential trace mineral involved in insulin signalling. Studies suggest it may improve glucose tolerance in people who are chromium-deficient — which includes some older adults and people with type 2 diabetes. However, for those with normal chromium status, the effect is minimal to non-existent.</p>
+<p>The inconsistency in study results reflects this: chromium works when there's a deficiency to correct, not as a general blood sugar optimiser. Dosing also matters — most studies showing benefit used 200–1000mcg daily.</p>
+
+<h3>Cinnamon: Popular, But the Evidence Is Weaker</h3>
+<p>Cinnamon contains compounds that may slow gastric emptying and reduce postprandial glucose spikes. Some small trials have shown modest reductions in fasting blood glucose. However, study quality varies considerably, and effects disappear when controlling for diet. Cinnamon is not harmful, but it should be viewed as a mild complementary ingredient rather than a therapeutic agent.</p>
+
+<h3>What This Means for You</h3>
+<p>If you're looking at a blood sugar supplement, berberine should be the primary active ingredient you evaluate — and at a meaningful dose (typically 500mg two to three times daily, taken with meals). Chromium and cinnamon can reasonably appear as supporting ingredients, but a formula built primarily around cinnamon is not evidence-based. Read the ingredient list before the marketing copy.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ARTICLE MODAL: OMEGA-3 -->
+<div class="modal-overlay" id="article-omega3">
+  <div class="modal-box">
+    <div class="modal-header">
+      <button class="modal-close" onclick="closeModal('article-omega3')">✕</button>
+      <div class="modal-series">Series 07 · Omega-3</div>
+      <h2>Omega-3 for Brain &amp; Heart: Why Source and Purity Matter</h2>
+      <div class="modal-meta">14 Jun 2026</div>
+    </div>
+    <div class="modal-body">
+<p>EPA and DHA are long-chain omega-3 fatty acids that play critical roles in cardiovascular function, brain health, inflammation regulation, and eye health. Your body cannot synthesise them in meaningful quantities — they must come from diet or supplementation.</p>
+<p>Most people in modern diets are significantly under-consuming EPA and DHA, while over-consuming omega-6 fatty acids from vegetable oils. This imbalance drives a chronic pro-inflammatory state now linked to cardiovascular disease, cognitive decline, and metabolic dysfunction.</p>
+
+<h3>Source Matters: Not All Omega-3s Are Equal</h3>
+<p>The majority of omega-3 supplements on the market use ethyl ester (EE) form — a processed form created during concentration. It's cheaper to manufacture, but studies consistently show lower bioavailability than the natural triglyceride (TG) form found in whole fish.</p>
+<p>The difference is not trivial. A landmark study published in <em>Prostaglandins, Leukotrienes and Essential Fatty Acids</em> found triglyceride-form omega-3s absorbed up to 70% better than ethyl ester equivalents. If your supplement doesn't specify the molecular form, it's almost certainly ethyl ester.</p>
+
+<h3>Oxidation: The Hidden Quality Problem</h3>
+<p>Omega-3 fatty acids are highly susceptible to oxidation — exposure to heat, light, and oxygen degrades them into compounds that may be harmful rather than beneficial. Studies of retail fish oil supplements in New Zealand and Australia have found a significant proportion exceed international oxidation limits.</p>
+<p>Signs of an oxidised product: a strong fishy smell when the capsule is broken open, a rancid aftertaste, or a very low price point that suggests minimal quality controls. Quality manufacturers test for peroxide value (PV), anisidine value (AV), and total oxidation (TOTOX) — and publish those results.</p>
+
+<h3>What to Look for on the Label</h3>
+<p>A quality omega-3 supplement will specify EPA and DHA content per serving (not just "fish oil" content), declare the molecular form as triglyceride, carry a third-party purity certification such as IFOS (International Fish Oil Standards), and come in an opaque, nitrogen-flushed capsule. These details separate a therapeutic product from a commodity one.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ARTICLE MODAL: NZ STANDARD -->
+<div class="modal-overlay" id="article-nzstandard">
+  <div class="modal-box">
+    <div class="modal-header">
+      <button class="modal-close" onclick="closeModal('article-nzstandard')">✕</button>
+      <div class="modal-series">Series 08 · Standards</div>
+      <h2>Why New Zealand Supplements Are Held to a Higher Standard</h2>
+      <div class="modal-meta">28 Jul 2026</div>
+    </div>
+    <div class="modal-body">
+<p>When you buy a supplement in New Zealand, you're operating within one of the more rigorous regulatory environments for natural health products in the world. This matters — not because it guarantees every product on the shelf is good, but because the floor for what can be sold here is meaningfully higher than in many other markets.</p>
+
+<h3>The Regulatory Framework</h3>
+<p>Natural health products in New Zealand are regulated under the Natural Health and Supplementary Products Act 2023 (NHSP Act), administered by Medsafe. Products must be notified to the register, carry compliant labelling, and meet Good Manufacturing Practice (GMP) standards. Unlike the United States, where supplements can be sold with minimal pre-market oversight, New Zealand requires a defined compliance pathway before a product reaches consumers.</p>
+<p>GMP certification — audited by recognised bodies including AsureQuality and NSF International — verifies that a manufacturer's facilities, processes, and documentation meet pharmaceutical-grade standards. This covers ingredient identity testing, batch records, stability data, and contamination controls.</p>
+
+<h3>What This Means in Practice</h3>
+<p>A GMP-certified New Zealand supplement manufacturer operates to the same production standards as a pharmaceutical facility. Ingredients are tested for identity and purity before use. Finished products are tested against specification before release. Batch records are kept and auditable. This is not universal in the supplement industry globally — in many markets, what's on the label and what's in the capsule can diverge significantly.</p>
+
+<h3>Third-Party Testing as an Additional Layer</h3>
+<p>Beyond GMP, quality-focused brands commission independent third-party testing for heavy metals, microbial contamination, and active ingredient concentration. This provides a verification layer outside the manufacturer's own systems — and the results should be available on request or published publicly.</p>
+<p>When evaluating any supplement, these are the questions worth asking: Is the manufacturer GMP certified? Who audited that certification? Is there third-party testing data available? These aren't marketing questions — they're quality questions, and the answers tell you what you're actually buying.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ARTICLE MODAL: KETOSIS -->
+<div class="modal-overlay" id="article-ketosis">
+  <div class="modal-box">
+    <div class="modal-header">
+      <button class="modal-close" onclick="closeModal('article-ketosis')">✕</button>
+      <div class="modal-series">Series 09 · BHB &amp; Ketosis</div>
+      <h2>Ketosis vs. Low-Carb: What&#x2019;s the Difference and Which Works?</h2>
+      <div class="modal-meta">12 Sep 2026</div>
+    </div>
+    <div class="modal-body">
+<p>Many people use "low-carb" and "ketosis" interchangeably. They're related — but they describe different metabolic states, and that distinction matters if you're considering BHB supplementation.</p>
+
+<h3>Low-Carb: A Spectrum, Not a Switch</h3>
+<p>A low-carbohydrate diet simply reduces carbohydrate intake below a typical level. This can mean 100–150g of carbs per day (moderately low) or 20–50g per day (very low). The metabolic effects vary considerably depending on where on that spectrum you sit — and critically, low-carb eating does not necessarily produce ketosis.</p>
+<p>Ketosis is a specific metabolic state: the liver is producing ketone bodies (beta-hydroxybutyrate, acetoacetate, and acetone) at a rate sufficient to elevate blood ketone levels above approximately 0.5 mmol/L. This happens when carbohydrate availability is low enough — and glycogen stores depleted enough — that the liver switches to fat as its primary substrate.</p>
+
+<h3>The Threshold That Matters</h3>
+<p>For most people, sustained nutritional ketosis requires restricting carbohydrates to under 20–50g per day, combined with moderate protein intake (excess protein can be converted to glucose via gluconeogenesis, preventing ketosis even on very low carb). This is a strict threshold. Someone eating 80–100g of carbs daily may feel the benefits of reduced sugar and processed food, but they are unlikely to be in ketosis.</p>
+
+<h3>Where BHB Supplementation Fits</h3>
+<p>BHB ketone salts provide exogenous (externally-sourced) ketones. They can transiently raise blood ketone levels regardless of dietary state — which is why they're used to support the transition into ketosis, reduce keto flu symptoms during adaptation, or provide ketone availability during periods when strict dietary adherence isn't possible.</p>
+<p>They don't replace the metabolic adaptation that comes from sustained dietary ketosis — but they're a meaningful support tool for people actively working toward it, or maintaining it with some flexibility. The key is understanding what they do: they supplement ketone availability, they don't independently produce the full metabolic shift that dietary ketosis creates over weeks of adaptation.</p>
     </div>
   </div>
 </div>
@@ -1188,7 +1325,7 @@ footer{
       <button class="modal-close" onclick="closeModal('article-bhb')">✕</button>
       <div class="modal-series">Series 01 · BHB & Weight Management</div>
       <h2>How BHB Ketone Salts Shift Your Body Into Fat-Burning Mode</h2>
-      <div class="modal-meta">20 May 2025</div>
+      <div class="modal-meta">25 May 2025</div>
     </div>
     <div class="modal-body">
 <p>Most weight management supplements chase a single lever — suppress appetite, block fat absorption, or spike metabolism. BHB (Beta-Hydroxybutyrate) works differently. It changes the fundamental fuel source your body prefers to burn, at the cellular level.</p>
@@ -1224,7 +1361,7 @@ footer{
       <button class="modal-close" onclick="closeModal('article-blood')">✕</button>
       <div class="modal-series">Series 02 · Blood Sugar Regulation</div>
       <h2>Why Postprandial Glucose Spikes Matter More Than Fasting Levels</h2>
-      <div class="modal-meta">15 May 2025</div>
+      <div class="modal-meta">20 Sep 2025</div>
     </div>
     <div class="modal-body">
 <p>When most people think about blood sugar, they think about fasting glucose — the number on a morning blood test. But emerging research consistently shows that what happens to your blood sugar <em>after</em> a meal is a far more powerful predictor of long-term metabolic health.</p>
@@ -1259,7 +1396,7 @@ footer{
       <button class="modal-close" onclick="closeModal('article-sleep')">✕</button>
       <div class="modal-series">Series 03 · Sleep Formula</div>
       <h2>The 2-Phase Sleep Architecture and Why Deep Sleep Is Non-Negotiable</h2>
-      <div class="modal-meta">10 May 2025</div>
+      <div class="modal-meta">8 Dec 2025</div>
     </div>
     <div class="modal-body">
 <p>Sleep is not a passive state. It is an active, highly orchestrated biological process — and the quality of that process determines everything from immune function to cognitive performance, body composition, and emotional regulation.</p>
@@ -1299,7 +1436,7 @@ footer{
       <button class="modal-close" onclick="closeModal('article-fish')">✕</button>
       <div class="modal-series">Series 04 · High-Purity Fish Oil</div>
       <h2>Triglyceride vs Ethyl Ester: Which Form of Omega-3 Actually Absorbs?</h2>
-      <div class="modal-meta">5 May 2025</div>
+      <div class="modal-meta">30 Jan 2026</div>
     </div>
     <div class="modal-body">
 <p>Walk into any pharmacy and you'll find dozens of fish oil products. Most look similar on the label — EPA and DHA milligrams prominently displayed. But the form of omega-3 inside those capsules varies enormously, and that difference has a profound impact on how much your body actually absorbs.</p>
@@ -1337,7 +1474,7 @@ footer{
       <button class="modal-close" onclick="closeModal('article-krill')">✕</button>
       <div class="modal-series">Series 05 · Krill Oil</div>
       <h2>How Phospholipid Omega-3s from Krill Reach Cells Fish Oil Cannot</h2>
-      <div class="modal-meta">29 Apr 2025</div>
+      <div class="modal-meta">17 Mar 2026</div>
     </div>
     <div class="modal-body">
 <p>Krill oil and fish oil both deliver EPA and DHA — the two omega-3 fatty acids most associated with cardiovascular, cognitive, and anti-inflammatory benefits. But the way they deliver these fatty acids is fundamentally different, and that difference changes what your cells actually receive.</p>
